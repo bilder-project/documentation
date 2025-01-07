@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: documentation
+  namespace: nepremicnine
+spec:
+  selector:
+    matchLabels:
+      app: documentation
+  template:
+    metadata:
+      labels:
+        app: documentation
+    spec:
+      containers:
+        - name: documentation
+          image: potocnikvid/nepremicnine-documentation
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: "1.0"
+              memory: "64Mi"
+            requests:
+              cpu: "0.1"
+              memory: "32Mi"
