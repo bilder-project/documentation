@@ -44,13 +44,13 @@ Projekt je sestavljen iz treh glavnih komponent, in sicer iz podatkovnih baz, za
 
 Projekt uporablja eno podatkovno bazo, in sicer Supabase za hrambo podatkov, ki jih aplikacija potrebuje za njeno delovanje. Supabase uporablja prav tako za avtentikacijo in za hrambo datotek - slik.
 
-Sheme vseh tabel podatkovne baze Supabase so dostopne v repozitoriju _________.
+Sheme vseh tabel podatkovne baze Supabase so dostopne v repozitoriju [database](https://github.com/bilder-project/database).
 
 ## Zaledne mikrostoritve
 
 Projekt je sestavljen iz večih mikrostoritev, pri čemer vsaka služi svojemu namenu. Nekatere mikrostoritve služijo upravljanju in povezavi zunanjih storitev, druge zbiranju in transformiranju podatkov namenjeni kasnejši analizi in predlogom, tretje pa služijo delovanju aplikacije. Vse mikrostoritve delujejo znotraj platforme Kubernetes, ki je nameščena na ponudniku oblačnih storitev Azure.
 
-Za namestitev in konfiguracijo infrastrukture smo uporabili orodje Terraform, ki je dostopno v repozitoriju _________. Prav tako smo se pri razvoju projekta držali dobrih praks razvoja programske opreme.
+Za namestitev in konfiguracijo infrastrukture smo uporabili orodje Terraform, ki je dostopno v repozitoriju [infrastructure](https://github.com/bilder-project/infrastructure). Prav tako smo se pri razvoju projekta držali dobrih praks razvoja programske opreme.
 
 Mikrostoritve so:
 
@@ -63,9 +63,7 @@ Mikrostoritve so:
 
 ## Uporabniški vmesnik
 
-Projekt vsebuje spletni uporabniški vmesnik spisan v ogrodju React. Uporabniški vmesnik je  dostopen v repozitoriju ________ in na naslovu ___________.
-
-DODAJ NEKE SLIKE??
+Projekt vsebuje spletni uporabniški vmesnik spisan v ogrodju React. Uporabniški vmesnik je  dostopen v repozitoriju [front-end](https://github.com/bilder-project/front-end) in na naslovu [tukaj](https://app.sagaj.si/).
 
 ## Arhitektura
 
@@ -74,6 +72,8 @@ DODAJ NEKE SLIKE??
 Opomba: Opis projekta predstavlja cilj, ki smo si ga zadali. Nekaterih komponent nam žal ni uspelo vključiti oz. se končna implementacija od le tega razlikuje. Od te točke dalje opisujemo le stvari, ki so bile zahtevane, da jih naredimo.
 
 ## Zahteve
+
+Izpolnjene zahteve so zapisane v oddaji končnega poročila.
 
 - Repozitorij [1t]
 - Mikrostoritve in »cloud-native« aplikacija [6t]
@@ -110,6 +110,7 @@ Opomba: Opis projekta predstavlja cilj, ki smo si ga zadali. Nekaterih komponent
 - Pridobi uporabnika GET /auth/me
 - Osveži jwt POST /refresh_token
 - Pridobi zdravje mikrostoritve GET /health
+- Pridobivanje metrik GET /metrics
 
 **Mikrostoritev za upravljanje z nepremičninami:**:
 - Ustvari nepremičnino POST /properties
@@ -119,6 +120,8 @@ Opomba: Opis projekta predstavlja cilj, ki smo si ga zadali. Nekaterih komponent
 - Izbriši nepremičnino DELETE /properties/{property_id}
 - Posodobi nepremičnino PATCH /properties/{property_id}
 - Pridobi zdravje mikrostoritve GET /health
+- Pridobivanje metrik GET /metrics
+
 
 **Mikrostoritev za upravljanje z uporabniki:**: 
 - Pridobi uporabnika GET /users/{users_id}
@@ -130,24 +133,32 @@ Opomba: Opis projekta predstavlja cilj, ki smo si ga zadali. Nekaterih komponent
 - Pridobi zdravje mikrostoritve (pomnilnik) GET /health/disk
 - Pridobi informacijo ali je mikrostoritev živa GET /liveness
 - Pridobi informacijo ali je mikrostoritev pripravljena GET /readiness
+- Pridobivanje metrik GET /metrics
+
 
 **Mikrostoritev za logiranje in sledenje zgodovine:**: 
 - Ustvari iskalni zapis POST /search_log
 - Ustvari zapis obiskovanja POST /visited_log
 - Pridobi zdravje mikrostoritve GET /health
+- Pridobivanje metrik GET /metrics
+
 
 **Mikrostoritev iskanje nepremičnin:**: 
 - Iskanje nepremičnin GET property-search/search
 - Pridobi zdravje mikrostoritve GET /health
+- Pridobivanje metrik GET /metrics
+
 
 **Mikrostoritev za pridobivanje lokacij:**: 
 - Pridobi predlog lokacije GET /location-autocomplete/location/suggestions
 - Pridobi par lat long na pdlagi lokacije GET /location-autocomplete/location/geometry
 - Pridobi zdravje mikrostoritve GET /health
+- Pridobivanje metrik GET /metrics
+
 
 ## Uporabne povezave
 
-Aplikacija je dostopna na naslovu: _______ pri čemer je vsaka mikrostoritev dostopna na svojem naslovu.
+Aplikacija je dostopna na naslovu: [tukaj](https://app.sagaj.si/), pri čemer je vsaka mikrostoritev dostopna na svojem naslovu.
 
 Mikrostoritev avtentikacije: _______
 
@@ -163,38 +174,36 @@ Mikrostoritev za pridobivanje lokacij: _______
 
 ## Povezave do GitHub repozitorijev:
 
-Dokumentacija - _____
+Dokumentacija - https://github.com/bilder-project/documentation
 
-Infrastruktura - ______
+Infrastruktura - https://github.com/bilder-project/infrastructure
 
-Sheme podatkovnih baz - _____
+Sheme podatkovnih baz - https://github.com/bilder-project/database
 
-Mikrostoritev avtentikacije: _______
+Mikrostoritev avtentikacije -  https://github.com/bilder-project/authentication
 
-Mikrostoritev za upravljanje z nepremičninami: ___________
+Mikrostoritev za upravljanje z nepremičninami - https://github.com/bilder-project/property-managing
 
-Mikrostoritev za upravljanje z uporabniki: _______
+Mikrostoritev za upravljanje z uporabniki - https://github.com/bilder-project/user-managing
 
-Mikrostoritev za logiranje in sledenje zgodovine: _______
+Mikrostoritev za logiranje in sledenje zgodovine - https://github.com/bilder-project/logging
 
-Mikrostoritev iskanje nepremičnin: _______
+Mikrostoritev iskanje nepremičnin - https://github.com/bilder-project/property-search
 
-Mikrostoritev za pridobivanje lokacij: _______
-
-Spletna aplikacija - ______
+Mikrostoritev za pridobivanje lokacij - https://github.com/bilder-project/documentation
 
 ## Povezave do Docker Hub repozitorijev:
 
 
-Mikrostoritev avtentikacije: _______
+Mikrostoritev avtentikacije: https://hub.docker.com/r/potocnikvid/nepremicnine-authentication
 
-Mikrostoritev za upravljanje z nepremičninami: ___________
+Mikrostoritev za upravljanje z nepremičninami: https://hub.docker.com/r/potocnikvid/nepremicnine-property-managing
 
-Mikrostoritev za upravljanje z uporabniki: _______
+Mikrostoritev za upravljanje z uporabniki: https://hub.docker.com/r/potocnikvid/nepremicnine-user-managing
 
-Mikrostoritev za logiranje in sledenje zgodovine: _______
+Mikrostoritev za logiranje in sledenje zgodovine: https://hub.docker.com/r/potocnikvid/nepremicnine-logging
 
-Mikrostoritev iskanje nepremičnin: _______
+Mikrostoritev iskanje nepremičnin: https://hub.docker.com/r/potocnikvid/nepremicnine-property-search
 
-Mikrostoritev za pridobivanje lokacij: _______
+Mikrostoritev za pridobivanje lokacij: https://hub.docker.com/r/potocnikvid/nepremicnine-location-autocomplete
 
