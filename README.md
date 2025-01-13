@@ -160,17 +160,17 @@ Izpolnjene zahteve so zapisane v oddaji končnega poročila.
 
 Aplikacija je dostopna na naslovu: [tukaj](https://app.sagaj.si/), pri čemer je vsaka mikrostoritev dostopna na svojem naslovu.
 
-Mikrostoritev avtentikacije: _______
+Mikrostoritev avtentikacije: https://oblak.sagaj.si/authentication/docs
 
-Mikrostoritev za upravljanje z nepremičninami: ___________
+Mikrostoritev za upravljanje z nepremičninami: https://oblak.sagaj.si/property-managing/docs
 
-Mikrostoritev za upravljanje z uporabniki: _______
+Mikrostoritev za upravljanje z uporabniki: https://oblak.sagaj.si/user-managing/docs
 
-Mikrostoritev za logiranje in sledenje zgodovine: _______
+Mikrostoritev za logiranje in sledenje zgodovine: https://oblak.sagaj.si/logging/docs
 
-Mikrostoritev iskanje nepremičnin: _______
+Mikrostoritev iskanje nepremičnin: https://oblak.sagaj.si/property-search/docs
 
-Mikrostoritev za pridobivanje lokacij: _______
+Mikrostoritev za pridobivanje lokacij: https://oblak.sagaj.si/location-autocomplete/docs
 
 ## Povezave do GitHub repozitorijev:
 
